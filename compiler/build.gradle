@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply from: '../quality/quality.gradle'
+apply plugin: 'com.novoda.bintray-release'
+
+
+publish {
+    groupId = 'com.github.amitkma'
+    artifactId = 'stitch-compiler'
+    publishVersion = '0.1.1'
+    desc = 'Annotation processor for stitch threading library'
+    licences = ['Apache-2.0']
+    uploadName='StitchCompiler'
+    website = 'https://github.com/amitkma/Stitch.git'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.squareup:javapoet:1.9.0'
+    compile 'com.google.auto.service:auto-service:1.0-rc2'
+    compile 'com.google.guava:guava:21.0'
+    compile 'com.google.auto:auto-common:0.6'
+    compile project(':stitch-annotations')
+
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

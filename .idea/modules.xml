@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Stitch.iml" filepath="$PROJECT_DIR$/Stitch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/compiler/compiler.iml" filepath="$PROJECT_DIR$/compiler/compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stitch-annotations/stitch-annotations.iml" filepath="$PROJECT_DIR$/stitch-annotations/stitch-annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stitch-lib/stitch-lib.iml" filepath="$PROJECT_DIR$/stitch-lib/stitch-lib.iml" />
+    </modules>
+  </component>
+</project>
