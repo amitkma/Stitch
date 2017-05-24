@@ -48,7 +48,7 @@ class ExampleClass {
 Now, build the project using terminal or by `Build -> Rebuild Project` in android studio. StitchCompiler will generate a new class file for the class in which annotated methods are. The name of generated class will be the name of existing class + "Stitch". For example in above case, name of generated file will be "ExampleClassStitch".
 
 Next is to get the instance of the generated class (for calling the methods). So to get the instance of generated class, you need to stitch generated class and the required class like below : 
-```
+```Java
 // If getting instance in other class.
 ExampleClassStitch exampleClassStitch = ExampleClassStitch.stitch(new ExampleClass()); 
 
@@ -56,7 +56,7 @@ ExampleClassStitch exampleClassStitch = ExampleClassStitch.stitch(new ExampleCla
 ExampleClassStitch exampleClassStitch = ExampleClassStitch.stitch(this);.
 ```
 After that, you can call the method as usual and the method will execute upon the annotated thread.
-```
+``` Java
 exampleClassStitch.getBitmapFromURL("https://image.freepik.com/free-vector/android-boot-logo_634639.jpg");
 ```
 This is it. 
