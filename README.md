@@ -1,4 +1,4 @@
-# Stitch
+# Stitch [ ![Download](https://api.bintray.com/packages/amitkma/maven/stitch-lib/images/download.svg) ](https://bintray.com/amitkma/maven/stitch-lib/_latestVersion)
 Simple threading library using annotations for Android
 
 ## Download
