@@ -19,6 +19,13 @@ android {
     }
 }
 
+repositories {
+    maven {
+        url'https://dl.bintray.com/amitkma/maven'
+    }
+}
+
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -27,8 +34,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     testCompile 'junit:junit:4.12'
+    compile 'com.github.amitkma:stitch-lib:1.0.1'
     annotationProcessor project(':compiler')
-    compile project(':stitch-lib')
     /*compile 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'*/
 

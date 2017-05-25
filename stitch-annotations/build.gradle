@@ -1,9 +1,16 @@
 apply plugin: 'java'
 apply from: '../quality/quality.gradle'
 
+ext {
+    libraryDescription = 'Annotations for Stitch Library'
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-sourceCompatibility = "1.7"
-targetCompatibility = "1.7"
+sourceCompatibility = sourceCompatibilityVersion
+targetCompatibility = targetCompatibilityVersion
+
+apply from: rootProject.file('gradle/install.gradle')
+apply from: rootProject.file('gradle/bintray.gradle')

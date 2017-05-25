@@ -5,8 +5,8 @@ Simple threading library using annotations for Android
 
 ```gradle
 dependencies {
-  compile 'com.github.amitkma:stitch-lib:0.1.1'
-  annotationProcessor 'com.github.amitkma:stitch-compiler:0.1.1'
+  compile 'com.github.amitkma:stitch-lib:1.0.1'
+  annotationProcessor 'com.github.amitkma:compiler:1.0.1'
 }
 ```
 ## Usage

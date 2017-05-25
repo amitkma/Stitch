@@ -1,16 +1,8 @@
 apply plugin: 'java'
 apply from: '../quality/quality.gradle'
-apply plugin: 'com.novoda.bintray-release'
 
-
-publish {
-    groupId = 'com.github.amitkma'
-    artifactId = 'stitch-compiler'
-    publishVersion = '0.1.1'
-    desc = 'Annotation processor for stitch threading library'
-    licences = ['Apache-2.0']
-    uploadName='StitchCompiler'
-    website = 'https://github.com/amitkma/Stitch.git'
+ext {
+    libraryDescription = 'Annotation Processor for Stitch Library'
 }
 
 dependencies {
@@ -23,5 +15,8 @@ dependencies {
 
 }
 
-sourceCompatibility = "1.7"
-targetCompatibility = "1.7"
+sourceCompatibility = sourceCompatibilityVersion
+targetCompatibility = targetCompatibilityVersion
+
+apply from: rootProject.file('gradle/install.gradle')
+apply from: rootProject.file('gradle/bintray.gradle')
