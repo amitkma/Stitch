@@ -53,7 +53,8 @@ public class BackgroundExecutor {
      * @param callable Required callable instance.
      * @param <T> Generic.
      * @return T
-     * @throws InterruptedException Thrown when a thread is waiting, sleeping, or otherwise occupied,
+     * @throws InterruptedException Thrown when a thread is waiting, sleeping, or otherwise
+     * occupied,
      * and the thread is interrupted, either before or during the activity.
      * @throws ExecutionException Exception thrown when attempting to retrieve the result of a task
      * that aborted by throwing an exception.
