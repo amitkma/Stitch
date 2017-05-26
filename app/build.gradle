@@ -32,13 +32,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     testCompile 'junit:junit:4.12'
-    compile 'com.github.amitkma:stitch-lib:1.0.1'
+    compile project(':stitch-lib')
     annotationProcessor project(':compiler')
-    /*compile 'com.jakewharton:butterknife:8.6.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'*/
-
-    annotationProcessor "org.androidannotations:androidannotations:4.3.0"
-    compile "org.androidannotations:androidannotations-api:4.3.0"
 }
