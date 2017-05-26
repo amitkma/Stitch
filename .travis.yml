@@ -10,6 +10,10 @@ android:
                 - extra-android-m2repository
 script:
         - ./gradlew build
+cache:
+        directories:
+                - $HOME/.m2
+                - $HOME/.gradle
 branches:
         only:
                 - master

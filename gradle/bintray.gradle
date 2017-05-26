@@ -46,24 +46,26 @@ artifacts {
 }
 
 Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
+if(project.rootProject.file('local.properties').exists()){
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
-bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
+    bintray {
+        user = properties.getProperty("bintray.user")
+        key = properties.getProperty("bintray.apikey")
 
-    configurations = ['archives']
-    publish = true
-    pkg {
-        repo = 'maven'
-        name = project.name
-        websiteUrl = githubUrl
-        vcsUrl = gitUrl
-        licenses = ["Apache-2.0"]
-        version {
-            gpg {
-                sign = true //Determines whether to GPG sign the files. The default is false
-                passphrase = properties.getProperty("bintray.gpg.password") //Optional. The passphrase for GPG signing'
+        configurations = ['archives']
+        publish = true
+        pkg {
+            repo = 'maven'
+            name = project.name
+            websiteUrl = githubUrl
+            vcsUrl = gitUrl
+            licenses = ["Apache-2.0"]
+            version {
+                gpg {
+                    sign = true //Determines whether to GPG sign the files. The default is false
+                    passphrase = properties.getProperty("bintray.gpg.password") //Optional. The passphrase for GPG signing'
+                }
             }
         }
     }
